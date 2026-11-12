@@ -119,4 +119,25 @@ Stromversorgung & 5 V über USB-C \\
 
 \end{table}
 
+\subsection{Berechnung des Temperaturmittelwerts}
+
+Zur Glättung mehrerer Messungen kann der
+arithmetische Mittelwert verwendet werden.
+
+Für n aufeinanderfolgende Temperaturmessungen
+ergibt sich folgende Gleichung:
+
+\begin{equation}
+    \overline{T} =
+    \frac{1}{n}\sum_{i=1}^{n} T_i
+    \label{eq:mittelwert}
+\end{equation}
+
+Dabei bezeichnet $T_i$ den jeweiligen Messwert
+und $n$ die Anzahl der Messungen.
+
+Nach Gleichung~\ref{eq:mittelwert} kann beispielsweise
+aus drei Messwerten der durchschnittliche
+Temperaturwert berechnet werden.
+
 \end{document}

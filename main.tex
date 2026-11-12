@@ -1,24 +1,44 @@
+
 \documentclass[a4paper,11pt]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% Sprache und Schrift
+\usepackage{fontspec}
 \usepackage[ngerman]{babel}
-\usepackage{lmodern}
-\usepackage{geometry}
-\geometry{left=2.3cm,right=2.3cm,top=2cm,bottom=2cm}
 
+% Seitenlayout
+\usepackage{geometry}
+\geometry{
+    left=2.3cm,
+    right=2.3cm,
+    top=2cm,
+    bottom=2cm
+}
+
+% Pakete
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{caption}
-\usepackage{hyperref}
 \usepackage{microtype}
+\usepackage{hyperref}
 
+% Absatzformatierung
 \setlength{\parskip}{4pt}
 \setlength{\parindent}{0pt}
 
-\title{\textbf{Technische Mini-Dokumentation}\\
-\large Temperaturüberwachung mit einem Raspberry Pi 4}
+% Hyperref-Einstellungen
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% Titel
+\title{
+    \textbf{Technische Mini-Dokumentation}\\
+    \large Temperaturüberwachung mit einem Raspberry Pi 4
+}
 
 \author{Beispielprojekt}
 \date{\today}
@@ -104,23 +124,21 @@ Tabelle~\ref{tab:daten} zeigt ausgewählte
 technische Eigenschaften des Raspberry Pi 4.
 
 \begin{table}[ht]
-\centering
+    \centering
+    \caption{Technische Daten des Raspberry Pi 4 Model B.}
+    \label{tab:daten}
 
-\caption{Technische Daten des Raspberry Pi 4 Model B.}
-\label{tab:daten}
-
-\begin{tabular}{ll}
-\toprule
-\textbf{Merkmal} & \textbf{Angabe} \\
-\midrule
-Prozessor & Broadcom BCM2711, Quad-Core \\
-Arbeitsspeicher & 1, 2, 4 oder 8 GB \\
-GPIO & 40-poliger Anschluss \\
-Netzwerk & WLAN und Gigabit-Ethernet \\
-Stromversorgung & 5 V über USB-C \\
-\bottomrule
-\end{tabular}
-
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Merkmal} & \textbf{Angabe} \\
+        \midrule
+        Prozessor & Broadcom BCM2711, Quad-Core \\
+        Arbeitsspeicher & 1, 2, 4 oder 8 GB \\
+        GPIO & 40-poliger Anschluss \\
+        Netzwerk & WLAN und Gigabit-Ethernet \\
+        Stromversorgung & 5 V über USB-C \\
+        \bottomrule
+    \end{tabular}
 \end{table}
 
 \subsection{Berechnung des Temperaturmittelwerts}
@@ -128,7 +146,7 @@ Stromversorgung & 5 V über USB-C \\
 Zur Glättung mehrerer Messungen kann der
 arithmetische Mittelwert verwendet werden.
 
-Für n aufeinanderfolgende Temperaturmessungen
+Für $n$ aufeinanderfolgende Temperaturmessungen
 ergibt sich folgende Gleichung:
 
 \begin{equation}
@@ -145,6 +163,6 @@ aus drei Messwerten der durchschnittliche
 Temperaturwert berechnet werden.
 
 \bibliographystyle{plain}
-\bibliography{literatur}
+\bibliography{references}
 
 \end{document}

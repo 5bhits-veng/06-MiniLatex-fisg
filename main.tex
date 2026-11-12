@@ -60,4 +60,23 @@ Komponenten benötigt:
     \item USB-C-Netzteil
 \end{itemize}
 
+\subsection{Systemarchitektur}
+
+Der Sensor misst die Umgebungstemperatur und
+überträgt die Daten an den Raspberry Pi.
+Dieser verarbeitet die Messwerte und speichert
+sie zur späteren Analyse.
+
+Abbildung~\ref{fig:aufbau} zeigt den grundsätzlichen
+Aufbau des Systems.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.88\linewidth]
+    {images/systemaufbau.png}
+    \caption{Schematischer Aufbau der Temperaturüberwachung
+    (eigene Darstellung).}
+    \label{fig:aufbau}
+\end{figure}
+
 \end{document}

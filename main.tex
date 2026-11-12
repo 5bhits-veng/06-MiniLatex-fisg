@@ -79,4 +79,19 @@ Aufbau des Systems.
     \label{fig:aufbau}
 \end{figure}
 
+\subsection{Software und Ablauf}
+
+Die Messwerterfassung kann mit Python umgesetzt werden.
+Ein Programm liest den Sensorwert in einem festen
+Zeitintervall aus und speichert ihn in einer CSV-Datei.
+
+Der Ablauf besteht aus vier Schritten:
+
+\begin{enumerate}
+    \item Sensor initialisieren und Verbindung prüfen.
+    \item Temperaturwert auslesen.
+    \item Messwert mit Zeitstempel speichern.
+    \item Vorgang nach einer Wartezeit wiederholen.
+\end{enumerate}
+
 \end{document}
